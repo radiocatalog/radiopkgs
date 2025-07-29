@@ -4,7 +4,6 @@
   fetchFromGitHub,
   alsa-lib,
   gtk3,
-  installShellFiles,
   pkg-config,
 }:
 
@@ -21,21 +20,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    installShellFiles
   ];
 
   buildInputs = [
     gtk3
     alsa-lib
   ];
-
-  makeFlags = [
-    "DOCDIR=$(out)/share/doc"
-  ];
-
-  postInstall = ''
-    installManPage doc/xwefax.1.gz
-  '';
 
   meta = {
     description = "Decoding, display and saving of Wefax/Radiofax images";
