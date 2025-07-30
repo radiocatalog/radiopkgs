@@ -6,14 +6,14 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "arim";
-  version = "unstable-2025-07-19";
+  version = "2.12";
 
   src = fetchFromGitHub {
     owner = "radiocatalog";
     repo = "arim";
-    rev = "a6b3892a1092024052d5af0d895af4dbe5e0b625";
+    tag = "${finalAttrs.version}";
     hash = "sha256-Lcp8xrFO+VvvIh+STcGXbLU3zdhGuo6Ert9MwK5KRrM=";
   };
 
@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Amateur Radio Instant Messaging";
     homepage = "https://github.com/radiocatalog/arim";
-    changelog = "https://github.com/radiocatalog/arim/blob/${src.rev}/NEWS";
+    changelog = "https://github.com/radiocatalog/arim/blob/${finalAttrs.src.tag}/NEWS";
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [
       pkharvey
@@ -34,4 +34,4 @@ stdenv.mkDerivation rec {
     mainProgram = "arim";
     platforms = lib.platforms.all;
   };
-}
+})
