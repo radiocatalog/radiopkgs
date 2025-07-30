@@ -7,14 +7,14 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "xritty";
   version = "0.9.1";
 
   src = fetchFromGitHub {
     owner = "radiocatalog";
     repo = "xritty";
-    rev = "61e6fb148f94b2f43dc86083457e3bd1a176d414";
+    tag = "${finalAttrs.version}";
     hash = "sha256-odNeDhLsgi1eUEDcmUrsryh6q+dG+o9OGIC9raI/+k4=";
   };
 
@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
   meta = {
     description = "GUI for communication in the RTTY (Radio Tele TYpe) mode";
     homepage = "https://github.com/radiocatalog/xritty";
-    changelog = "https://github.com/radiocatalog/xritty/blob/${src.rev}/ChangeLog";
+    changelog = "https://github.com/radiocatalog/xritty/blob/${finalAttrs.src.tag}/ChangeLog";
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [
       pkharvey
@@ -37,4 +37,4 @@ stdenv.mkDerivation rec {
     mainProgram = "xritty";
     platforms = lib.platforms.all;
   };
-}
+})
