@@ -17,7 +17,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-Lcp8xrFO+VvvIh+STcGXbLU3zdhGuo6Ert9MwK5KRrM=";
   };
 
-  buildInputs = [ ncurses zlib ];
+  buildInputs = [
+    ncurses
+    zlib
+  ];
 
   env.NIX_CFLAGS_COMPILE = "-Wno-format-security";
 

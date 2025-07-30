@@ -17,7 +17,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-vtTwsnvzdPZAAX2lZjUv9BOQusmfHYjzRzQc8Gge4I4=";
   };
 
-  nativeBuildInputs = [ fltk zlib ];
+  nativeBuildInputs = [
+    fltk
+    zlib
+  ];
 
   meta = {
     description = "GUI host mode program for the VARA HF Modem";

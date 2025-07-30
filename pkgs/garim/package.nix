@@ -17,7 +17,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-SzRUqvP49jLiDL7cCJM3TVcCG+VTSticYgk1/iDC+VU=";
   };
 
-  nativeBuildInputs = [ fltk zlib ];
+  nativeBuildInputs = [
+    fltk
+    zlib
+  ];
 
   meta = {
     description = "GUI host mode program for the ARDOP TNC";

@@ -28,7 +28,10 @@ stdenv.mkDerivation rec {
     "DOCDIR=$(out)/share/doc"
   ];
 
-  buildInputs = [ ncurses alsa-lib ];
+  buildInputs = [
+    ncurses
+    alsa-lib
+  ];
 
   meta = {
     description = "Ncurses-based Linux console application for PSK31 digital mode";

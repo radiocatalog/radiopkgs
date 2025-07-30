@@ -18,7 +18,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-odNeDhLsgi1eUEDcmUrsryh6q+dG+o9OGIC9raI/+k4=";
   };
 
-  buildInputs = [ gtk3 alsa-lib ];
+  buildInputs = [
+    gtk3
+    alsa-lib
+  ];
 
   nativeBuildInputs = [ pkg-config ];
 

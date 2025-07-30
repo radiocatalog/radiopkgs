@@ -32,12 +32,15 @@ gcc9Stdenv.mkDerivation rec {
     cat Makefile
   '';
 
-#  patches = [ ./fix-callsign-definition.patch ];
+  #  patches = [ ./fix-callsign-definition.patch ];
 
   meta = {
     description = "SMTP mailbox for linux based packet node servers";
     homepage = "https://github.com/radiocatalog/axmail";
-    license = with lib.licenses; [ gpl2Only gpl3Only ];
+    license = with lib.licenses; [
+      gpl2Only
+      gpl3Only
+    ];
     maintainers = with lib.maintainers; [
       matthewcroughan
       sarcasticadmin
