@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Calculates distance (qrb) and azimuth given two Maidenhead locators";
     homepage = "https://github.com/radiocatalog/wwl";
-    # license = lib.licenses.unfree; # No LICENSE`
+    license = lib.licenses.unfree; # No LICENSE
     maintainers = with lib.maintainers; [
       matthewcroughan
       pkharvey

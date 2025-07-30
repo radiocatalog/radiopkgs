@@ -19,6 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     fltk
+  ];
+
+  buildInputs = [
+    fltk
     zlib
   ];
 

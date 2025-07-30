@@ -36,13 +36,13 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Ncurses-based Linux console application for PSK31 digital mode";
     homepage = "https://github.com/radiocatalog/lpsk31.git";
-    license = lib.licenses.gpl3Only;
+    license = lib.licenses.gpl3Plus;
     maintainers = with lib.maintainers; [
       matthewcroughan
       sarcasticadmin
       pkharvey
     ];
     mainProgram = "lpsk31";
-    platforms = lib.platforms.all;
+    platforms = lib.platforms.linux;
   };
 }

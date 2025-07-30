@@ -58,7 +58,10 @@ gcc13Stdenv.mkDerivation {
 
   meta = with lib; {
     description = "Winlink RMS Gateway";
-    license = licenses.gpl2;
+    license = [
+      licenses.gpl2Plus
+      licenses.gpl3Plus
+    ];
     maintainers = with lib.maintainers; [
       matthewcroughan
       sarcasticadmin
