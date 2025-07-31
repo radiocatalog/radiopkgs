@@ -14,12 +14,11 @@ gcc13Stdenv.mkDerivation {
   pname = "rmsgw";
   version = "unstable-2024-12-28";
 
-  # will repoint to radiocatalog after repo is pushed
   src = fetchFromGitHub {
-    owner = "nwdigitalradio";
+    owner = "radiocatalog";
     repo = "rmsgw";
-    rev = "029f23fccffd05c19447896a36d926b28366d344";
-    sha256 = "sha256-cwNUoLFPnXO2uqj7dJz1ccCVgPZhtHLC1iPKEv12NZI=";
+    rev = "5ec9a3fced6400d1d200d0c7564531f43b6bfaff";
+    sha256 = "sha256-7bShJ9z5Si2A6nWs+vP19l/tDOeIouWojBIbig/2nhU=";
   };
 
   buildInputs = [
